@@ -21,7 +21,7 @@ let package = Package(
         .binaryTarget(
             name: "InAppKit",
             url: "https://github.com/trinhxuanminh/InAppKit-SPM/releases/download/1.0.0/InAppKit.xcframework.zip",
-            checksum: "c8c05b4cf1020ab98dbd546fe4832e6913611595ad6f8552a2ab3eee59acc28e"
+            checksum: "e1b5016eb5fcbe1205b4250494d559806d785f450f0d21823ed13826738a4823"
         )
     ]
 )
