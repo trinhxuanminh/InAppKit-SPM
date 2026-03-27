@@ -20,8 +20,8 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .binaryTarget(
             name: "InAppKit",
-            url: "https://github.com/trinhxuanminh/InAppKit-SPM/releases/download/1.1.0/InAppKit.xcframework.zip",
-            checksum: "64200401a7588910cdc5515c546b66b4b974d587385a10d71662c78d375321cd"
+            url: "https://github.com/trinhxuanminh/InAppKit-SPM/releases/download/1.1.1/InAppKit.xcframework.zip",
+            checksum: "25a3b76ea93788005ea7bc239e8ce39e7fa1d73c5e03ab6d6cf5e6e18e24f717"
         )
     ]
 )
