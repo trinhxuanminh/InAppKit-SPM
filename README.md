@@ -296,6 +296,21 @@ PermissionManager.shared.consumable(product: productInfo.product)
 
 ---
 
+### Bật logging (`isLoggingEnabled`)
+
+Mặc định InAppKit **không in log**. Để bật log nội bộ (prefix `[InAppKit]`), bật flag trước khi gọi `configureShared`:
+
+```swift
+import InAppKit
+
+// Trong AppDelegate / @main, trước configureShared(...)
+InAppKit.isLoggingEnabled = true
+```
+
+> **Lưu ý:** Flag này hoạt động ở **mọi build configuration** (Debug & Release). Nhớ tắt hoặc bọc điều kiện trước khi phát hành production.
+
+---
+
 ### Khôi phục giao dịch (`restore`)
 
 ```swift
@@ -464,6 +479,6 @@ Cứ **30 giây**, InAppKit quét danh sách permission hiện tại. Nếu phá
 
 Với **Introductory Offer**, framework hỗ trợ từ iOS 15. Với **Promotional** và **Win-Back Offers**, cần iOS 17.2+ để kiểm tra chính xác. Trên các phiên bản cũ hơn, hàm trả về `.unknown`.
 
-### ℹ️ Logging chỉ hoạt động ở DEBUG build
+### ℹ️ Logging được kiểm soát bởi `isLoggingEnabled`
 
-Tất cả log nội bộ của InAppKit chỉ in ra ở **DEBUG** configuration với prefix `[InAppKit]`. Không có log nào rò rỉ ra production build.
+Tất cả log nội bộ của InAppKit sử dụng prefix `[InAppKit]` và mặc định **bị tắt** (`isLoggingEnabled = false`). Bật flag này trong môi trường development để xem log; nhớ giữ tắt khi phát hành production để không rò rỉ thông tin.
